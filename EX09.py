@@ -1,0 +1,10 @@
+print('----- INVERÇÃO DE NUMEROS -----')
+numero1 = int(input("Digite um primeiro numero inteiro: \n"))
+numero2 = int(input("Digite um segundo numero inteiro: \n"))
+
+print('==== ANTES ====')
+print(f"Primeiro numero digitado: {numero1}.\n")
+print(f"Segundo numero digitado: {numero2}.\n")
+print("=== DEPOIS ===")
+print(f"Valor alterado do primeiro numero digitado: {numero2}.\n")
+print(f"Valor alterado do segundo numero digitado: {numero1}.\n")
