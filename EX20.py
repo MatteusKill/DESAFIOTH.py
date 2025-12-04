@@ -1,3 +1,9 @@
+cores = {
+    "limpa":"\033[m",
+    "Vermelho":"\033[31m",
+    "Verde":"\033[32m"
+}
+
 def calcularMedia (nota1,nota2,nota3):
     p1 = 1
     p2 = 1
@@ -28,19 +34,19 @@ def calcularMedia (nota1,nota2,nota3):
 
 primeiraNota = float(input("Informe o valor da primeira nota obtida (0-100): "))
 if primeiraNota < 0:
-    print("Erro! Digite apenas notas de 0 a 100.")
+    print(f"{cores['Vermelho']}Erro! Digite apenas notas de 0 a 100.{cores['limpa']}")
 else:
     segundaNota = float(input("Informe o valor da segunda nota obtida(0-100): "))
     if segundaNota < 0:
-        print("Erro! Digite apenas notas de 0 a 100.")
+        print(f"{cores['Vermelho']}Erro! Digite apenas notas de 0 a 100.{cores['limpa']}")
     else:
         terceiraNota = float(input("Informe o valor da nota obtida (0-100): "))
         if terceiraNota < 0:
-            print("Erro! Digite apenas notas de 0 a 100.")
+            print(f"{cores['Vermelho']}Erro! Digite apenas notas de 0 a 100.{cores['limpa']}")
         else:
             media = calcularMedia(primeiraNota,segundaNota,terceiraNota)
 
             if media > 60:
-                print("Status do aluno: Aprovado.")
+                print(f"Status do aluno: {cores['Verde']}Aprovado.{cores['limpa']}")
             else:
-                print("Status do aluno: Reprovado.")
+                print(f"Status do aluno: {cores['Vermelho']}Reprovado.{cores['limpa']}")
